@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа по 3 уроку</title>
+</head>
+<body>
+
+<script>
+    "use strict";
+
+    //1 задание
+    for(let i = 0; i<= 10; i++){
+       if (i % 2 == 0){
+           console.log(i + " - это четное число");
+       } else{
+           console.log(i + " - это нечетное число");
+       }
+    }
+
+    //2 задание
+    const post = {
+        author: "John", //вывести этот текст
+        postId: 23,
+        comments: [
+            {
+                userId: 10,
+                userName: "Alex",
+                text: "lorem ipsum",
+                rating: {
+                    likes: 10,
+                    dislikes: 2 //вывести это число
+                }
+            },
+            {
+                userId: 5, //вывести это число
+                userName: "Jane",
+                text: "lorem ipsum 2", //вывести этот текст
+                rating: {
+                    likes: 3,
+                    dislikes: 1
+                }
+            },
+        ]
+    };
+
+    //Выводим первый текст
+    console.log(post.author);
+
+    //Выводим дизлайки
+    console.log(post.comments[0]['rating'].dislikes);
+
+    //Выводим userId
+    console.log(post.comments[1]["userId"]);
+
+    //Выводим текст
+    console.log(post.comments[1]["text"]);
+
+
+
+    //3 задание. Скидка 15%
+    const products = [
+        {
+            id: 3,
+            price: 200,
+        },
+        {
+            id: 4,
+            price: 900,
+        },
+        {
+            id: 1,
+            price: 1000,
+        },
+    ];
+
+    let discount = 15;
+
+    //Тут происходит вся магия со скидкой.
+    function makeDiscount(price){
+        console.log("Цена со скидкой на товар id " + price["id"] + ": " + (price["price"] / 100 * discount));
+    }
+
+    //Перебираем массив продуктов
+    products.forEach(makeDiscount);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
